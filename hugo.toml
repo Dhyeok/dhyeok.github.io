@@ -1,4 +1,4 @@
-baseURL = 'https://hyeok.github.io/'
+baseURL = 'https://dhyeok.github.io/'
 languageCode = 'ko-kr'
 title = 'Hyeok Dev Blog'
 theme = 'PaperMod'
