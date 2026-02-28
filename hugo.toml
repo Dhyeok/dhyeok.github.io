@@ -19,51 +19,35 @@ disableKinds = ['RSS']
 
 [menu]
   [[menu.main]]
-    identifier = 'posts'
-    name = 'Posts'
-    url = '/posts/'
-    weight = 10
-
-  [[menu.main]]
-    identifier = 'posts-ai'
-    parent = 'posts'
+    identifier = 'ai'
     name = 'AI'
-    url = '/categories/ai/'
-    weight = 1
+    url = '/all/ai/'
+    weight = 10
   [[menu.main]]
-    identifier = 'posts-infra'
-    parent = 'posts'
+    identifier = 'infra'
     name = 'Infra'
-    url = '/categories/infra/'
-    weight = 2
-  [[menu.main]]
-    identifier = 'posts-tech'
-    parent = 'posts'
-    name = 'Tech'
-    url = '/categories/tech/'
-    weight = 3
-  [[menu.main]]
-    identifier = 'posts-culture'
-    parent = 'posts'
-    name = 'Culture'
-    url = '/categories/culture/'
-    weight = 4
-
-  [[menu.main]]
-    identifier = 'about'
-    name = 'About'
-    url = '/about/'
+    url = '/all/infra/'
     weight = 20
+  [[menu.main]]
+    identifier = 'tech'
+    name = 'Tech'
+    url = '/all/tech/'
+    weight = 30
+  [[menu.main]]
+    identifier = 'culture'
+    name = 'Culture'
+    url = '/all/culture/'
+    weight = 40
   [[menu.main]]
     identifier = 'projects'
     name = 'Projects'
     url = '/projects/'
-    weight = 30
+    weight = 50
   [[menu.main]]
     identifier = 'search'
     name = 'Search'
     url = '/search/'
-    weight = 40
+    weight = 60
 
 [taxonomies]
   category = 'categories'

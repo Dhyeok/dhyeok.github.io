@@ -1,0 +1,26 @@
+{{ define "main" }}
+<main class="main medium-feed">
+  <section class="home-hero">
+    <h1>All Topics</h1>
+    <p>전체 포스트 모음</p>
+  </section>
+
+  {{ $posts := where site.RegularPages "Section" "posts" }}
+  {{ range $posts.ByDate.Reverse }}
+    <article class="post-entry">
+      <header class="entry-header">
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      </header>
+      <div class="entry-content">
+        {{ with .Summary }}<p>{{ . }}</p>{{ else }}<p>{{ .Plain | truncate 190 }}</p>{{ end }}
+      </div>
+      <footer class="entry-footer">
+        <span>{{ .Date | time.Format "2006-01-02" }}</span>
+        {{ with .Params.categories }}
+          <span> · {{ delimit . ", " }}</span>
+        {{ end }}
+      </footer>
+    </article>
+  {{ end }}
+</main>
+{{ end }}

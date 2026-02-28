@@ -1,15 +1,16 @@
 {{ define "main" }}
 <main class="main medium-feed">
+  {{ $topic := .Params.topic }}
   <section class="home-hero">
-    <h1>Hyeok Tech Letter</h1>
-    <p>AI · Infra · Tech · Culture 실무 인사이트를 빠르게 정리합니다.</p>
+    <h1>{{ $topic }}</h1>
+    <p>{{ $topic }} 카테고리 포스트 모음</p>
   </section>
 
-  {{ $posts := where site.RegularPages "Section" "posts" }}
-  {{ $latest := first 5 ($posts.ByDate.Reverse) }}
+  {{ $posts := where (where site.RegularPages "Section" "posts") "Params.categories" "intersect" (slice $topic) }}
+  {{ $sorted := $posts.ByDate.Reverse }}
 
-  {{ if gt (len $latest) 0 }}
-    {{ range $latest }}
+  {{ if gt (len $sorted) 0 }}
+    {{ range $sorted }}
       <article class="post-entry">
         <header class="entry-header">
           <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
@@ -26,7 +27,7 @@
       </article>
     {{ end }}
   {{ else }}
-    <p>아직 게시된 글이 없습니다.</p>
+    <p>아직 {{ $topic }} 카테고리 포스트가 없습니다.</p>
   {{ end }}
 </main>
 {{ end }}

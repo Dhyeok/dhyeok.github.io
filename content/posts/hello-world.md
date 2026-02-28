@@ -3,7 +3,7 @@ title: "첫 글: 블로그 시작"
 date: 2026-02-28T00:00:00+09:00
 draft: false
 tags: ["start", "blog"]
-categories: ["general"]
+categories: ["Tech"]
 ---
 
 hyeok.github.io 블로그 오픈!
