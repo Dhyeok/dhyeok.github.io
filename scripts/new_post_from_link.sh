@@ -11,7 +11,13 @@ SOURCE_URL="$2"
 CATEGORY="$3"
 TAGS="${4:-ai,it-news}"
 TAGS_YAML="\"${TAGS//,/\", \"}\""
-DATE_KST="$(TZ=Asia/Seoul date '+%Y-%m-%dT%H:%M:%S+09:00')"
+DATE_KST="$(python3 - <<'PY'
+from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
+now = datetime.now(ZoneInfo('Asia/Seoul')) - timedelta(minutes=2)
+print(now.strftime('%Y-%m-%dT%H:%M:%S+09:00'))
+PY
+)"
 FILE_DATE="$(TZ=Asia/Seoul date '+%Y-%m-%d')"
 TARGET="content/posts/${FILE_DATE}-${SLUG}.md"
 
