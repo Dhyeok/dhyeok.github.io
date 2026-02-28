@@ -1,0 +1,63 @@
+{{ define "main" }}
+<main class="main">
+  <header class="page-header">
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}<div class="post-description">{{ . }}</div>{{ end }}
+  </header>
+
+  <section>
+    <h2>Featured Projects</h2>
+    {{ $featured := where .Pages "Params.featured" true }}
+    {{ if gt (len $featured) 0 }}
+      <div class="archive-posts">
+        {{ range $featured.ByWeight }}
+          <article class="post-entry">
+            <header class="entry-header">
+              <h3>{{ .Title }}</h3>
+            </header>
+            <div class="entry-content">
+              <p>{{ .Params.summary }}</p>
+              <ul>
+                {{ with .Params.role }}<li><strong>Role:</strong> {{ . }}</li>{{ end }}
+                {{ with .Params.impact }}<li><strong>Impact:</strong> {{ . }}</li>{{ end }}
+                <li><strong>Updated:</strong> {{ .Date | time.Format "2006-01-02" }}</li>
+              </ul>
+              {{ with .Params.project_url }}
+                <p><a href="{{ . }}" target="_blank" rel="noopener">프로젝트 링크</a></p>
+              {{ end }}
+            </div>
+          </article>
+        {{ end }}
+      </div>
+    {{ else }}
+      <p>아직 등록된 Featured Projects가 없습니다.</p>
+    {{ end }}
+  </section>
+
+  <section style="margin-top:2rem;">
+    <h2>Recent Repos</h2>
+    {{ $recent := site.Data.github_recent }}
+    {{ if gt (len $recent) 0 }}
+      <div class="archive-posts">
+        {{ range $recent }}
+          <article class="post-entry">
+            <header class="entry-header">
+              <h3><a href="{{ .html_url }}" target="_blank" rel="noopener">{{ .name }}</a></h3>
+            </header>
+            <div class="entry-content">
+              <p>{{ .description }}</p>
+              <ul>
+                <li><strong>Language:</strong> {{ if .language }}{{ .language }}{{ else }}N/A{{ end }}</li>
+                <li><strong>Stars:</strong> {{ .stargazers_count }}</li>
+                <li><strong>Updated:</strong> {{ .updated_at }}</li>
+              </ul>
+            </div>
+          </article>
+        {{ end }}
+      </div>
+    {{ else }}
+      <p>최근 저장소 동기화 데이터가 아직 없습니다.</p>
+    {{ end }}
+  </section>
+</main>
+{{ end }}
