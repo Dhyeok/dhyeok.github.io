@@ -23,26 +23,32 @@ disableKinds = ['RSS']
     name = 'Posts'
     url = '/posts/'
     weight = 10
+
   [[menu.main]]
     identifier = 'posts-ai'
-    name = 'Posts/AI'
+    parent = 'posts'
+    name = 'AI'
     url = '/categories/ai/'
-    weight = 11
+    weight = 1
   [[menu.main]]
     identifier = 'posts-infra'
-    name = 'Posts/Infra'
+    parent = 'posts'
+    name = 'Infra'
     url = '/categories/infra/'
-    weight = 12
+    weight = 2
   [[menu.main]]
     identifier = 'posts-tech'
-    name = 'Posts/Tech'
+    parent = 'posts'
+    name = 'Tech'
     url = '/categories/tech/'
-    weight = 13
+    weight = 3
   [[menu.main]]
     identifier = 'posts-culture'
-    name = 'Posts/Culture'
+    parent = 'posts'
+    name = 'Culture'
     url = '/categories/culture/'
-    weight = 14
+    weight = 4
+
   [[menu.main]]
     identifier = 'about'
     name = 'About'
@@ -58,7 +64,6 @@ disableKinds = ['RSS']
     name = 'Search'
     url = '/search/'
     weight = 40
-
 
 [taxonomies]
   category = 'categories'
