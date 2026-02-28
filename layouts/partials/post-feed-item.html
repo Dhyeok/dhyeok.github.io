@@ -5,13 +5,13 @@
 {{- $thumb := .Params.thumbnail -}}
 {{- if not $thumb -}}
   {{- if eq $cat "ai" -}}
-    {{- $thumb = "/images/thumbs/ai.svg" -}}
+    {{- $thumb = "/images/thumbs/ai.jpg" -}}
   {{- else if eq $cat "infra" -}}
-    {{- $thumb = "/images/thumbs/infra.svg" -}}
+    {{- $thumb = "/images/thumbs/infra.jpg" -}}
   {{- else if eq $cat "culture" -}}
-    {{- $thumb = "/images/thumbs/culture.svg" -}}
+    {{- $thumb = "/images/thumbs/culture.jpg" -}}
   {{- else -}}
-    {{- $thumb = "/images/thumbs/tech.svg" -}}
+    {{- $thumb = "/images/thumbs/tech.jpg" -}}
   {{- end -}}
 {{- end -}}
 
