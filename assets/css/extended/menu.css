@@ -75,6 +75,28 @@ body,
   padding: 22px 0;
 }
 
+.feed-item-inner {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.feed-thumb {
+  display: block;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.feed-thumb img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 1200 / 630;
+  object-fit: cover;
+}
+
 .medium-feed .entry-header h2 {
   font-size: 28px;
   line-height: 1.25;
@@ -90,4 +112,10 @@ body,
   margin-top: 8px;
   font-size: 13px;
   color: #777;
+}
+
+@media (max-width: 860px) {
+  .feed-item-inner {
+    grid-template-columns: 1fr;
+  }
 }

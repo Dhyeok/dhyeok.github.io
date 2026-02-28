@@ -1,0 +1,38 @@
+{{- $cat := "tech" -}}
+{{- with .Params.categories }}
+  {{- $cat = lower (index . 0) -}}
+{{- end -}}
+{{- $thumb := .Params.thumbnail -}}
+{{- if not $thumb -}}
+  {{- if eq $cat "ai" -}}
+    {{- $thumb = "/images/thumbs/ai.svg" -}}
+  {{- else if eq $cat "infra" -}}
+    {{- $thumb = "/images/thumbs/infra.svg" -}}
+  {{- else if eq $cat "culture" -}}
+    {{- $thumb = "/images/thumbs/culture.svg" -}}
+  {{- else -}}
+    {{- $thumb = "/images/thumbs/tech.svg" -}}
+  {{- end -}}
+{{- end -}}
+
+<article class="post-entry feed-item">
+  <div class="feed-item-inner">
+    <a class="feed-thumb" href="{{ .RelPermalink }}">
+      <img src="{{ $thumb }}" alt="{{ .Title }} thumbnail" loading="lazy" />
+    </a>
+    <div class="feed-content-wrap">
+      <header class="entry-header">
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      </header>
+      <div class="entry-content">
+        {{ with .Summary }}<p>{{ . }}</p>{{ else }}<p>{{ .Plain | truncate 190 }}</p>{{ end }}
+      </div>
+      <footer class="entry-footer">
+        <span>{{ .Date | time.Format "2006-01-02" }}</span>
+        {{ with .Params.categories }}
+          <span> · {{ delimit . ", " }}</span>
+        {{ end }}
+      </footer>
+    </div>
+  </div>
+</article>
