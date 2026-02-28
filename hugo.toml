@@ -1,0 +1,30 @@
+baseURL = 'https://hyeok.github.io/'
+languageCode = 'ko-kr'
+title = 'Hyeok Dev Blog'
+theme = 'PaperMod'
+disableKinds = ['RSS']
+
+[author]
+  name = 'hyeok'
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowCodeCopyButtons = true
+  defaultTheme = 'auto'
+
+[menu]
+  [[menu.main]]
+    identifier = 'posts'
+    name = 'Posts'
+    url = '/posts/'
+    weight = 10
+  [[menu.main]]
+    identifier = 'search'
+    name = 'Search'
+    url = '/search/'
+    weight = 20
