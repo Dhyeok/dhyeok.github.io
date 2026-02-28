@@ -4,7 +4,7 @@ date: 2026-02-28T12:24:00+09:00
 created: 2026-02-28T12:24:00+09:00
 draft: false
 tags: ["ai", "agent", "perplexity", "it-news"]
-categories: ["news"]
+categories: ["AI"]
 source_url: "https://news.hada.io/topic?id=27051"
 ---
 

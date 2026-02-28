@@ -34,7 +34,16 @@ disableKinds = ['RSS']
     url = '/projects/'
     weight = 30
   [[menu.main]]
+    identifier = 'categories'
+    name = 'Categories'
+    url = '/categories/'
+    weight = 40
+  [[menu.main]]
     identifier = 'search'
     name = 'Search'
     url = '/search/'
-    weight = 40
+    weight = 50
+
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
