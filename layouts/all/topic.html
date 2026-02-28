@@ -1,5 +1,5 @@
 {{ define "main" }}
-<main class="main medium-feed">
+<div class="medium-feed">
   {{ $topic := .Params.topic }}
   <section class="home-hero">
     <h1>{{ $topic }}</h1>
@@ -29,5 +29,5 @@
   {{ else }}
     <p>아직 {{ $topic }} 카테고리 포스트가 없습니다.</p>
   {{ end }}
-</main>
+</div>
 {{ end }}

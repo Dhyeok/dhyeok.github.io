@@ -15,7 +15,7 @@ disableKinds = ['RSS']
   ShowShareButtons = true
   ShowPostNavLinks = true
   ShowCodeCopyButtons = true
-  defaultTheme = 'auto'
+  defaultTheme = 'light'
 
 [menu]
   [[menu.main]]

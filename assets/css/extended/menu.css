@@ -1,10 +1,36 @@
+/* Light mode tuned to Medium-like white canvas */
+:root[data-theme="light"] {
+  --theme: #ffffff;
+  --entry: #ffffff;
+  --primary: #1a1a1a;
+  --secondary: #6b6b6b;
+  --tertiary: #f2f2f2;
+  --content: #2a2a2a;
+  --border: #e6e6e6;
+}
+
+body,
+.list,
+.main {
+  background: #ffffff;
+}
+
 .medium-header {
   border-bottom: 1px solid var(--border);
+  background: #fff;
+}
+
+.nav {
+  max-width: 760px;
+}
+
+.main {
+  max-width: 760px;
 }
 
 #menu.menu-inline {
   display: flex;
-  gap: 18px;
+  gap: 16px;
   align-items: center;
   white-space: nowrap;
 }
@@ -14,28 +40,54 @@
 }
 
 #menu.menu-inline a span {
-  font-size: 15px;
+  font-size: 14px;
+  color: #6b6b6b;
 }
 
-#menu.menu-inline a span.active {
+#menu.menu-inline a span.active,
+#menu.menu-inline a:hover span {
+  color: #1a1a1a;
   font-weight: 700;
 }
 
 .home-hero {
-  margin: 24px 0 8px;
+  margin: 22px 0 8px;
   padding-bottom: 14px;
   border-bottom: 1px solid var(--border);
 }
 
 .home-hero h1 {
   margin-bottom: 6px;
-  font-size: 2.2rem;
+  font-size: 40px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.home-hero p {
+  color: var(--secondary);
 }
 
 .medium-feed .post-entry {
   border-bottom: 1px solid var(--border);
   border-radius: 0;
   box-shadow: none;
-  margin-bottom: 0;
-  padding: 18px 0;
+  margin: 0;
+  padding: 22px 0;
+}
+
+.medium-feed .entry-header h2 {
+  font-size: 28px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.medium-feed .entry-content p {
+  color: #444;
+  margin-top: 10px;
+}
+
+.medium-feed .entry-footer {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #777;
 }
