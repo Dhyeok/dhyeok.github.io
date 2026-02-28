@@ -36,7 +36,6 @@ created: ${DATE_KST}
 draft: false
 tags: [${TAGS_YAML}]
 categories: ["${CATEGORY}"]
-source_url: "${SOURCE_URL}"
 ---
 
 ## 3줄 요약
@@ -52,8 +51,6 @@ source_url: "${SOURCE_URL}"
 ## 코멘트
 -
 
-## 출처
-- ${SOURCE_URL}
 EOF_INNER
 
 echo "created ${TARGET}"

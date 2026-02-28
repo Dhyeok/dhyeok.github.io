@@ -5,7 +5,6 @@ created: 2026-02-28T12:24:00+09:00
 draft: false
 tags: ["ai", "agent", "perplexity", "it-news"]
 categories: ["AI"]
-source_url: "https://news.hada.io/topic?id=27051"
 ---
 
 ## 3줄 요약
@@ -29,5 +28,3 @@ source_url: "https://news.hada.io/topic?id=27051"
 
 즉 앞으로의 차별점은 “무슨 모델을 쓰나”보다 “어떻게 안전하게 묶어 실제 일을 끝내나”에 가깝다.
 
-## 출처
-- https://news.hada.io/topic?id=27051
