@@ -40,7 +40,7 @@ source_url: "${SOURCE_URL}"
 2. 
 3. 
 
-## devbot 코멘트
+## 코멘트
 -
 
 ## 출처

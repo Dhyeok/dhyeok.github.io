@@ -43,7 +43,7 @@ Post template (hybrid tone):
 - Title
 - 3-line summary
 - Key points (3~5)
-- Devbot insight (practical implications)
+- 코멘트 (practical implications)
 - Source link
 
 Tone policy:
