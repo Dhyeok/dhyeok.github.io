@@ -4,7 +4,7 @@ date: 2026-02-28T15:41:50+09:00
 created: 2026-02-28T15:41:50+09:00
 draft: false
 tags: ["tech", "harbor", "kubernetes", "cncf", "devops"]
-categories: ["Tech"]
+categories: ["Infra"]
 ---
 
 ## 3줄 요약
